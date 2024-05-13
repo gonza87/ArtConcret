@@ -1,5 +1,3 @@
-import { DiCelluloid } from "react-icons/di";
-
 function Footer() {
   return (
     <footer className="footer">
@@ -23,6 +21,17 @@ function Footer() {
             <p>Envíos y devoluciones</p>
             <p>Política de privacidad</p>
             <p>FAQ</p>
+          </div>
+          <div className="col-12">
+            <p className="titleFooter">SUSCRÍBITE</p>
+            <form action="">
+              <input
+                className="inputEmail"
+                type="email"
+                placeholder="Ingrese su correo electrónico"
+              />
+              <button className="btnUnirse">Unirse</button>
+            </form>
           </div>
         </div>
       </div>
