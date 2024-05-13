@@ -1,3 +1,5 @@
+import { FaInstagram } from "react-icons/fa";
+
 function Footer() {
   return (
     <footer className="footer">
@@ -33,6 +35,11 @@ function Footer() {
               <button className="btnUnirse">Unirse</button>
             </form>
           </div>
+          <div className="col-12">
+            <FaInstagram size={25} className="mt-3 mb-3" />
+          </div>
+          <hr />
+          <p>© Copyright 2024 | ArtConcret</p>
         </div>
       </div>
     </footer>
