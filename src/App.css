@@ -1,3 +1,5 @@
+/*** https://coolors.co/palette/000000-66666e-9999a1-e6e6e9-f4f4f6 ***/
+
 /*** Estilos generales ***/
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
@@ -127,6 +129,8 @@ text-align: center;
   margin-left: 5px;
   padding-left: 5px;
   padding-right: 5px;
+  background-color: #E6E6E9;
+  color: #000000;
   
 }
 
