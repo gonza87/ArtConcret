@@ -43,11 +43,11 @@ body{
 
 .numberCart{
   position: absolute;
-  top: -20px; /* Ajusta la posición vertical según sea necesario */
-  right: -13px; /* Puedes ajustar esto según sea necesario */
-  background-color:#F4F4F6; /* Puedes cambiar el color de fondo si lo deseas */
-  color: #000000; /* Puedes cambiar el color del texto si lo deseas */
-  border-radius: 50%; /* Para hacerlo redondeado */
+  top: -20px; 
+  right: -13px; 
+  background-color:#F4F4F6; 
+  color: #000000; 
+  border-radius: 50%; 
   padding: 2px 9px;
 }
 
