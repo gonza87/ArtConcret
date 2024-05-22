@@ -35,9 +35,8 @@ function Contact() {
           <Form.Label>Mensaje</Form.Label>
           <Form.Control as="textarea" rows={3} />
         </Form.Group>
-        <Button variant="primary" type="submit">
-          Enviar mensaje
-        </Button>
+
+        <button className="btnContactSend">ENVIAR MENSAJE</button>
       </Form>
     </div>
   );
