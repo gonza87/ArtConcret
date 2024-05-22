@@ -9,7 +9,7 @@ function Contact() {
       <h2 className="mt-5">Contacto</h2>
       <p>Si tienes alguna pregunta, no dudes en contactarnos</p>
       <p>Tel: 914-123-456 | info@misitio.com</p>
-      <Form className="mt-5">
+      <Form className="mt-5 mb-5">
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridName">
             <Form.Label>Nombre</Form.Label>
