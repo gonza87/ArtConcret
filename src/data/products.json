@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "name": "Budita",
+        "price": 450,
+        "description": "High-quality sports t-shirt, ideal for workouts and outdoor activities.",
+        "image": "https://example.com/images/sports-t-shirt.jpg",
+        "featured": true,
+        "category": "Maceta"
+    },
+    {
+        "id": 2,
+        "name": "Carita Nórdica",
+        "price": 500,
+        "description": "Running shoes with advanced cushioning and ergonomic design.",
+        "image": "https://example.com/images/running-shoes.jpg",
+        "featured": false,
+        "category": "Maceta"
+    },
+    {
+        "id": 3,
+        "name": "Cuello Nórdico",
+        "price": 850,
+        "description": "Eco-friendly and reusable water bottle, perfect for staying hydrated all day.",
+        "image": "https://example.com/images/reusable-water-bottle.jpg",
+        "featured": true,
+        "category": "Maceta"
+    },
+    {
+        "id": 4,
+        "name": "Cuenco",
+        "price": 600,
+        "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
+        "image": "https://example.com/images/travel-backpack.jpg",
+        "featured": false,
+        "category": "Maceta"
+    },
+    {
+        "id": 5,
+        "name": "David",
+        "price": 900,
+        "description": "Wireless headphones with noise cancellation and long-lasting battery.",
+        "image": "https://example.com/images/wireless-headphones.jpg",
+        "featured": true,
+        "category": "Maceta"
+    },
+    {
+        "id": 6,
+        "name": "Ecofogón",
+        "price": 990,
+        "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
+        "image": "https://example.com/images/travel-backpack.jpg",
+        "featured": false,
+        "category": "Mechero"
+    },
+    {
+        "id": 7,
+        "name": "Esfera",
+        "price": 1400,
+        "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
+        "image": "https://example.com/images/travel-backpack.jpg",
+        "featured": false,
+        "category": "Maceta"
+    },
+    {
+        "id": 8,
+        "name": "Gema",
+        "price": 850,
+        "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
+        "image": "https://example.com/images/travel-backpack.jpg",
+        "featured": true,
+        "category": "Maceta"
+    },
+    {
+        "id": 9,
+        "name": "Geométrica",
+        "price": 490,
+        "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
+        "image": "https://example.com/images/travel-backpack.jpg",
+        "featured": true,
+        "category": "Maceta"
+    },
+    {
+        "id": 10,
+        "name": "Geométrica Sencilla",
+        "price": 390,
+        "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
+        "image": "https://example.com/images/travel-backpack.jpg",
+        "featured": true,
+        "category": "Maceta"
+    },
+    {
+        "id": 11,
+        "name": "Piña",
+        "price": 490,
+        "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
+        "image": "https://example.com/images/travel-backpack.jpg",
+        "featured": true,
+        "category": "Maceta"
+    },
+    {
+        "id": 12,
+        "name": "Set Velas",
+        "price": 890,
+        "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
+        "image": "https://example.com/images/travel-backpack.jpg",
+        "featured": true,
+        "category": "Vela"
+    },
+    {
+        "id": 13,
+        "name": "set Velas",
+        "price": 890,
+        "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
+        "image": "https://example.com/images/travel-backpack.jpg",
+        "featured": true,
+        "category": "Vela"
+    },
+    {
+        "id": 14,
+        "name": "Silueta Mujer",
+        "price": 930,
+        "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
+        "image": "https://example.com/images/travel-backpack.jpg",
+        "featured": true,
+        "category": "Maceta"
+    },
+    {
+        "id": 15,
+        "name": "Busto",
+        "price": 800,
+        "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
+        "image": "https://example.com/images/travel-backpack.jpg",
+        "featured": true,
+        "category": "Maceta"
+    },
+    {
+        "id": 16,
+        "name": "Ostra",
+        "price": 350,
+        "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
+        "image": "https://example.com/images/travel-backpack.jpg",
+        "featured": true,
+        "category": "Vela"
+    }
+]
