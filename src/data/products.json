@@ -6,7 +6,8 @@
         "description": "High-quality sports t-shirt, ideal for workouts and outdoor activities.",
         "image": "https://example.com/images/sports-t-shirt.jpg",
         "featured": true,
-        "category": "Maceta"
+        "category": "Maceta",
+        "stock": 100
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "description": "Running shoes with advanced cushioning and ergonomic design.",
         "image": "https://example.com/images/running-shoes.jpg",
         "featured": false,
-        "category": "Maceta"
+        "category": "Maceta",
+        "stock": 150
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "description": "Eco-friendly and reusable water bottle, perfect for staying hydrated all day.",
         "image": "https://example.com/images/reusable-water-bottle.jpg",
         "featured": true,
-        "category": "Maceta"
+        "category": "Maceta",
+        "stock": 200
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
         "image": "https://example.com/images/travel-backpack.jpg",
         "featured": false,
-        "category": "Maceta"
+        "category": "Maceta",
+        "stock": 80
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@
         "description": "Wireless headphones with noise cancellation and long-lasting battery.",
         "image": "https://example.com/images/wireless-headphones.jpg",
         "featured": true,
-        "category": "Maceta"
+        "category": "Maceta",
+        "stock": 120
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@
         "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
         "image": "https://example.com/images/travel-backpack.jpg",
         "featured": false,
-        "category": "Mechero"
+        "category": "Mechero",
+        "stock": 60
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@
         "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
         "image": "https://example.com/images/travel-backpack.jpg",
         "featured": false,
-        "category": "Maceta"
+        "category": "Maceta",
+        "stock": 50
     },
     {
         "id": 8,
@@ -69,7 +76,8 @@
         "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
         "image": "https://example.com/images/travel-backpack.jpg",
         "featured": true,
-        "category": "Maceta"
+        "category": "Maceta",
+        "stock": 130
     },
     {
         "id": 9,
@@ -78,7 +86,8 @@
         "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
         "image": "https://example.com/images/travel-backpack.jpg",
         "featured": true,
-        "category": "Maceta"
+        "category": "Maceta",
+        "stock": 70
     },
     {
         "id": 10,
@@ -87,7 +96,8 @@
         "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
         "image": "https://example.com/images/travel-backpack.jpg",
         "featured": true,
-        "category": "Maceta"
+        "category": "Maceta",
+        "stock": 90
     },
     {
         "id": 11,
@@ -96,7 +106,8 @@
         "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
         "image": "https://example.com/images/travel-backpack.jpg",
         "featured": true,
-        "category": "Maceta"
+        "category": "Maceta",
+        "stock": 110
     },
     {
         "id": 12,
@@ -105,7 +116,8 @@
         "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
         "image": "https://example.com/images/travel-backpack.jpg",
         "featured": true,
-        "category": "Vela"
+        "category": "Vela",
+        "stock": 75
     },
     {
         "id": 13,
@@ -114,7 +126,8 @@
         "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
         "image": "https://example.com/images/travel-backpack.jpg",
         "featured": true,
-        "category": "Vela"
+        "category": "Vela",
+        "stock": 75
     },
     {
         "id": 14,
@@ -123,7 +136,8 @@
         "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
         "image": "https://example.com/images/travel-backpack.jpg",
         "featured": true,
-        "category": "Maceta"
+        "category": "Maceta",
+        "stock": 140
     },
     {
         "id": 15,
@@ -132,7 +146,8 @@
         "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
         "image": "https://example.com/images/travel-backpack.jpg",
         "featured": true,
-        "category": "Maceta"
+        "category": "Maceta",
+        "stock": 125
     },
     {
         "id": 16,
@@ -141,6 +156,7 @@
         "description": "Spacious and durable backpack, ideal for travel and outdoor activities.",
         "image": "https://example.com/images/travel-backpack.jpg",
         "featured": true,
-        "category": "Vela"
+        "category": "Vela",
+        "stock": 95
     }
 ]
