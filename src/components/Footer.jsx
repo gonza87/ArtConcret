@@ -39,7 +39,7 @@ function Footer() {
             <FaInstagram size={25} className="mt-3 mb-3" />
           </div>
           <hr />
-          <p>© Copyright 2024 | ArtConcret</p>
+          <p>© Copyright {new Date().getFullYear()} | ArtConcret</p>
         </div>
       </div>
     </footer>
