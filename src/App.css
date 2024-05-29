@@ -29,7 +29,9 @@ body{
   
 }
 .menuNav{
-  color: #F4F4F6 !important;
+  color: #F4F4F6 ;
+  text-decoration: none;
+  padding: 5px;
 }
 
 .menuNav:hover{
