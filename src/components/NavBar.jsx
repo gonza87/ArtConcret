@@ -10,7 +10,7 @@ function NavBar() {
     <Navbar expand="lg" className="nav">
       <Container>
         <Navbar.Brand>
-          <img className="logo" src="./public/img/logoArt.jpg" alt="logo" />
+          <img className="logo" src="/public/img/logoArt.jpg" alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
