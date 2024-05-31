@@ -1,0 +1,14 @@
+[
+    {
+        "id": "macetas",
+        "nombre": "Macetas"
+    },
+    {
+        "id": "velas",
+        "nombre": "Velas"
+    },
+    {
+        "id": "mecheros",
+        "nombre": "Mecheros"
+    }
+]
