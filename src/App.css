@@ -32,11 +32,14 @@ body{
   color: #F4F4F6 ;
   text-decoration: none;
   padding: 5px;
+  background-color: #000000;
+  text-decoration: none;
+  border-style: none;
 }
 
 .menuNav:hover{
   color: #9999A1 !important;
-  
+  background-color: black;
 }
 
 .contCart{
