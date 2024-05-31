@@ -5,12 +5,16 @@ import Navbar from "react-bootstrap/Navbar";
 import Dropdown from "react-bootstrap/Dropdown";
 import ShoppingCart from "./ShoppingCart";
 
+import categories from "../.././public/data/categories.json";
+
 function NavBar() {
   return (
     <Navbar expand="lg" className="nav">
       <Container>
         <Navbar.Brand>
-          <img className="logo" src="/public/img/logoArt.jpg" alt="logo" />
+          <Link to={"/"}>
+            <img className="logo" src="/public/img/logoArt.jpg" alt="logo" />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -18,23 +22,29 @@ function NavBar() {
             <Dropdown>
               <Dropdown.Toggle
                 className="menuNav"
-                variant=""
-                id="dropdown-basic"
+                style={{ backgroundColor: "#000000" }}
               >
-                Dropdown Button
+                Tienda
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item as={Link} to="/category/macetas">
+                {categories.map((category) => {
+                  return (
+                    <Dropdown.Item
+                      key={category.id}
+                      as={Link}
+                      to={`/category/${category.id}`}
+                    >
+                      {category.name}
+                    </Dropdown.Item>
+                  );
+                })}
+                {/* <Dropdown.Item as={Link} to="/category/macetas">
                   Action
-                </Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                </Dropdown.Item> */}
               </Dropdown.Menu>
             </Dropdown>
-            <Link className="menuNav" to="/">
-              Tienda
-            </Link>
+
             <Link className="menuNav" to="/about">
               Sobre Nosotros
             </Link>

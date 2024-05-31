@@ -1,14 +1,14 @@
 [
     {
         "id": "macetas",
-        "nombre": "Macetas"
-    },
-    {
-        "id": "velas",
-        "nombre": "Velas"
+        "name": "Macetas"
     },
     {
         "id": "mecheros",
-        "nombre": "Mecheros"
+        "name": "Mecheros"
+    },
+    {
+        "id": "velas",
+        "name": "Velas"
     }
 ]
