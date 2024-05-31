@@ -1,25 +1,17 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import dataProducts from "../data/products.json";
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
 
-  const getProducts = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(dataProducts);
-      }, 1000);
-    });
-  };
-
   useEffect(() => {
-    getProducts()
-      .then((res) => {
-        setProducts(res);
+    fetch("/data/products.json")
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data);
       })
       .catch((error) => {
-        console.error("Error fetching products:", error);
+        console.error("Error al cargar los productos:", error);
       });
   }, []);
 
