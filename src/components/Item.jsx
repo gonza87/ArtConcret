@@ -1,4 +1,5 @@
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 
 function Item({ product }) {
   return (
@@ -6,7 +7,14 @@ function Item({ product }) {
       className="cardProduct"
       style={{ width: "18rem", background: "#E6E6E9" }}
     >
-      <Card.Img className="imgcardProduct" variant="top" src={product.image} />
+      <Link to={`/item/${product.id}`}>
+        <Card.Img
+          className="imgcardProduct"
+          variant="top"
+          src={product.image}
+        />
+      </Link>
+
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>{product.price}$</Card.Text>
