@@ -1,15 +1,15 @@
 import Card from "react-bootstrap/Card";
 
-function Item() {
+function Item({ product }) {
   return (
     <Card
       className="cardProduct"
       style={{ width: "18rem", background: "#E6E6E9" }}
     >
-      <Card.Img variant="top" src="./img/caritanordica.png" />
+      <Card.Img className="imgcardProduct" variant="top" src={product.image} />
       <Card.Body>
-        <Card.Title>Maceta Carita Nórdica</Card.Title>
-        <Card.Text>500$</Card.Text>
+        <Card.Title>{product.name}</Card.Title>
+        <Card.Text>{product.price}$</Card.Text>
         <span className="btnAddCart">AÑADIR AL CARRITO</span>
       </Card.Body>
     </Card>
