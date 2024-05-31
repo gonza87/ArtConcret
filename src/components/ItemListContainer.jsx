@@ -19,7 +19,7 @@ function ItemListContainer() {
       .catch((error) => {
         console.error("Error al cargar los productos:", error);
       });
-  }, []);
+  }, [categoryId]);
 
   return (
     <div className="container">
