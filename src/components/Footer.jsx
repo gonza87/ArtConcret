@@ -1,4 +1,5 @@
 import { FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -36,7 +37,12 @@ function Footer() {
             </form>
           </div>
           <div className="col-12">
-            <FaInstagram size={25} className="mt-3 mb-3" />
+            <Link
+              style={{ textDecoration: "none", color: "#F4F4F6" }}
+              to={"https://www.instagram.com/artconcret_uy/"}
+            >
+              <FaInstagram size={25} className="mt-3 mb-3" />
+            </Link>
           </div>
           <hr />
           <p>© Copyright {new Date().getFullYear()} | ArtConcret</p>
