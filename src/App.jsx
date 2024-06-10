@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import Cart from "./pages/Cart";
 import NotFound404 from "./pages/pageError/NotFound404";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/category/:categoryId" element={<Home />} />
         <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/*" element={<NotFound404 />} />

@@ -183,6 +183,37 @@ body {
 
 /****************************************************************************************************************************************/
 
+/*** Cart ***/
+.contCartIzquierda{
+  border: solid;
+  border-color: #66666E;
+  border-width: 0.1px;
+  padding: 10px;
+}
+.imgCart{
+  height: 100px;
+}
+.cartIzquierdaFlex{
+  display: flex;
+  align-items:start;
+  justify-content: space-between;
+}
+
+.contCartDerecha{
+  border: solid;
+  border-color: #66666E;
+  border-width: 0.1px;
+  padding: 10px;
+}
+
+.cartDerechaFlex{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+/****************************************************************************************************************************************/
 /*** Media Queries ***/
 
 @media (max-width: 992px) {
