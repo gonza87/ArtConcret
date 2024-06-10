@@ -189,6 +189,7 @@ body {
   border-color: #66666E;
   border-width: 0.1px;
   padding: 10px;
+  border-radius: 5px;
 }
 .imgCart{
   height: 100px;
@@ -204,6 +205,7 @@ body {
   border-color: #66666E;
   border-width: 0.1px;
   padding: 10px;
+  border-radius: 5px;
 }
 
 .cartDerechaFlex{

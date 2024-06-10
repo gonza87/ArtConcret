@@ -1,3 +1,5 @@
+import { MdDelete } from "react-icons/md";
+
 function Cart() {
   return (
     <div className="container mt-5 mb-5">
@@ -22,7 +24,8 @@ function Cart() {
                 style={{ width: "35px", height: "25px" }}
               />
               <p>350$</p>
-              <p>eliminar</p>
+
+              <MdDelete size={22} color="#000000" />
             </div>
           </div>
         </div>
