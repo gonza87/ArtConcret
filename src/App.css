@@ -193,6 +193,8 @@ body {
 }
 .imgCart{
   height: 100px;
+  width: 100px;
+  object-fit: cover;
 }
 .cartIzquierdaFlex{
   display: flex;

@@ -1,4 +1,18 @@
+import { useState } from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+
 function ItemDetail({ product }) {
+  const { cart, addToCart } = useContext(CartContext);
+  const [quantity, setQuantity] = useState(1);
+
+  const handleQuantityChange = (event) => {
+    const value = parseInt(event.target.value);
+    if (value >= 1) {
+      setQuantity(value);
+    }
+  };
+
   return (
     <>
       <div className="col-md-6">
@@ -16,9 +30,18 @@ function ItemDetail({ product }) {
           id="inputCantidad"
           name="inputCantidad"
           style={{ width: "60px" }}
+          value={quantity}
+          onChange={handleQuantityChange}
         />
         <div className="mt-2">
-          <span className="btnAddCart">AÑADIR AL CARRITO</span>
+          <span
+            className="btnAddCart"
+            onClick={() => {
+              addToCart(product, quantity);
+            }}
+          >
+            AÑADIR AL CARRITO
+          </span>
         </div>
 
         <hr />

@@ -1,6 +1,11 @@
+import React, { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import { MdDelete } from "react-icons/md";
 
 function Cart() {
+  const { cart, deleteCart, totalPrice, quantityInCart } =
+    useContext(CartContext);
+
   return (
     <div className="container mt-5 mb-5">
       <div className="row">
@@ -8,8 +13,25 @@ function Cart() {
           <div className="contCartIzquierda">
             <h2>Carrito</h2>
             <hr />
-            <div className="cartIzquierdaFlex">
-              <img
+            {cart.map((prod) => (
+              <div key={prod.id} className="cartIzquierdaFlex">
+                <>
+                  <img className="imgCart" src={prod.image} alt="" />
+                  <p>{prod.name}</p>
+
+                  {/* <input
+                    className="ms-2"
+                    type="number"
+                    id="inputCantidad"
+                    name="inputCantidad"
+                    style={{ width: "35px", height: "25px" }}
+                  /> */}
+                  <p>{prod.price}$</p>
+
+                  <MdDelete size={22} color="#000000" />
+                </>
+
+                {/* <img
                 className="imgCart"
                 src=".././img/caritanordica.png"
                 alt=""
@@ -25,7 +47,13 @@ function Cart() {
               />
               <p>350$</p>
 
-              <MdDelete size={22} color="#000000" />
+              <MdDelete size={22} color="#000000" /> */}
+              </div>
+            ))}
+            <div className="text-center">
+              <span className="btnAddCart" onClick={deleteCart}>
+                Vaciar Carrito
+              </span>
             </div>
           </div>
         </div>
@@ -36,8 +64,8 @@ function Cart() {
             <hr />
             <div className="cartDerechaFlex">
               <div className="d-flex justify-content-between">
-                <p>Productos(2)</p>
-                <p>1200$</p>
+                <p>Productos({quantityInCart()})</p>
+                <p>{totalPrice()}$</p>
               </div>
               <div className="d-flex justify-content-between">
                 <p>Envio</p>
@@ -45,7 +73,7 @@ function Cart() {
               </div>
               <div className="d-flex justify-content-between">
                 <p>Total</p>
-                <p>3252$</p>
+                <p>{totalPrice()}$</p>
               </div>
               <div className="text-center">
                 <span className="btnAddCart">Continuar Compra</span>
