@@ -3,8 +3,22 @@ import { CartContext } from "../context/CartContext";
 import { MdDelete } from "react-icons/md";
 
 function Cart() {
-  const { cart, deleteCart, totalPrice, quantityInCart, deleteProduct } =
-    useContext(CartContext);
+  const {
+    cart,
+    deleteCart,
+    totalPrice,
+    quantityInCart,
+    deleteProduct,
+    updateQuantity,
+  } = useContext(CartContext);
+
+  const handleQuantityChange = (productId, newQuantity) => {
+    if (newQuantity >= 1) {
+      updateQuantity(productId, newQuantity);
+    } else {
+      updateQuantity(productId, 1);
+    }
+  };
 
   return (
     <div className="container mt-5 mb-5">
@@ -24,7 +38,20 @@ function Cart() {
                       <p>{prod.name}</p>
                     </div>
                     <div className="col-md-3 col-6">
-                      <p>Cantidad {prod.quantity}</p>
+                      <input
+                        className="ms-2"
+                        type="number"
+                        id="inputCantidad"
+                        name="inputCantidad"
+                        style={{ width: "60px" }}
+                        value={prod.quantity}
+                        onChange={(e) =>
+                          handleQuantityChange(
+                            prod.id,
+                            parseInt(e.target.value)
+                          )
+                        }
+                      />
                     </div>
                     <div className="col-md-3 col-6">
                       <p>{prod.price * prod.quantity}$</p>
