@@ -27,9 +27,12 @@ export const CartProvider = ({ children }) => {
   const totalPrice = () => {
     return cart.reduce(
       (acc, prod) => acc + parseInt(prod.price) * parseInt(prod.quantity),
-      0,
       0
     );
+  };
+
+  const deleteProduct = (productId) => {
+    setCart(cart.filter((product) => product.id !== productId));
   };
 
   const deleteCart = () => {
@@ -44,6 +47,7 @@ export const CartProvider = ({ children }) => {
         quantityInCart,
         totalPrice,
         deleteCart,
+        deleteProduct,
       }}
     >
       {children}

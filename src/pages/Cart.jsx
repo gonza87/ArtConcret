@@ -3,7 +3,7 @@ import { CartContext } from "../context/CartContext";
 import { MdDelete } from "react-icons/md";
 
 function Cart() {
-  const { cart, deleteCart, totalPrice, quantityInCart } =
+  const { cart, deleteCart, totalPrice, quantityInCart, deleteProduct } =
     useContext(CartContext);
 
   return (
@@ -14,7 +14,7 @@ function Cart() {
             <h2>Carrito</h2>
             <hr />
             {cart.map((prod) => (
-              <div key={prod.id} className="row">
+              <div key={prod.id} className="row mb-2">
                 <div className="col-4">
                   <img className="imgCart" src={prod.image} alt="" />
                 </div>
@@ -24,13 +24,20 @@ function Cart() {
                       <p>{prod.name}</p>
                     </div>
                     <div className="col-md-3 col-6">
-                      <p>cantidad</p>
+                      <p>Cantidad {prod.quantity}</p>
                     </div>
                     <div className="col-md-3 col-6">
-                      <p>{prod.price}$</p>
+                      <p>{prod.price * prod.quantity}$</p>
                     </div>
                     <div className="col-md-3 col-6">
-                      <MdDelete size={22} color="#000000" />
+                      <MdDelete
+                        style={{ cursor: "pointer" }}
+                        size={22}
+                        color="#000000"
+                        onClick={() => {
+                          deleteProduct(prod.id);
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
