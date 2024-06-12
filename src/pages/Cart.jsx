@@ -14,40 +14,26 @@ function Cart() {
             <h2>Carrito</h2>
             <hr />
             {cart.map((prod) => (
-              <div key={prod.id} className="cartIzquierdaFlex">
-                <>
+              <div key={prod.id} className="row">
+                <div className="col-4">
                   <img className="imgCart" src={prod.image} alt="" />
-                  <p>{prod.name}</p>
-
-                  {/* <input
-                    className="ms-2"
-                    type="number"
-                    id="inputCantidad"
-                    name="inputCantidad"
-                    style={{ width: "35px", height: "25px" }}
-                  /> */}
-                  <p>{prod.price}$</p>
-
-                  <MdDelete size={22} color="#000000" />
-                </>
-
-                {/* <img
-                className="imgCart"
-                src=".././img/caritanordica.png"
-                alt=""
-              />
-              <p>Maceta Carita Nordica</p>
-
-              <input
-                className="ms-2"
-                type="number"
-                id="inputCantidad"
-                name="inputCantidad"
-                style={{ width: "35px", height: "25px" }}
-              />
-              <p>350$</p>
-
-              <MdDelete size={22} color="#000000" /> */}
+                </div>
+                <div className="col-8">
+                  <div className="row">
+                    <div className="col-md-3 col-6">
+                      <p>{prod.name}</p>
+                    </div>
+                    <div className="col-md-3 col-6">
+                      <p>cantidad</p>
+                    </div>
+                    <div className="col-md-3 col-6">
+                      <p>{prod.price}$</p>
+                    </div>
+                    <div className="col-md-3 col-6">
+                      <MdDelete size={22} color="#000000" />
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
             <div className="text-center">
