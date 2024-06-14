@@ -23,8 +23,8 @@ function Cart() {
 
   if (cart.length === 0) {
     return (
-      <div className="container mt-5 mb-5">
-        <h2>Carrito vacío</h2>
+      <div className="container ">
+        <h2 className="textCarritoVacio">Carrito vacío</h2>
       </div>
     );
   }
