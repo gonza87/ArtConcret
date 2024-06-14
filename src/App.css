@@ -269,6 +269,7 @@ body {
   .containerListProducts {
     justify-content: center !important;
   }
+
 }
 
 @media (max-width: 576px) {

@@ -32,7 +32,7 @@ function Cart() {
   return (
     <div className="container mt-5 mb-5">
       <div className="row">
-        <div className="col-md-8">
+        <div className="col-md-8 mt-1">
           <div className="contCartIzquierda">
             <h2>Carrito</h2>
             <hr />
@@ -87,7 +87,7 @@ function Cart() {
           </div>
         </div>
 
-        <div className="col-md-4">
+        <div className="col-md-4 mt-1">
           <div className="contCartDerecha">
             <h2>Resumen de compra</h2>
             <hr />
