@@ -27,7 +27,7 @@ function NavBar() {
       <Container>
         <Navbar.Brand>
           <Link to={"/"}>
-            <img className="logo" src="/public/img/logoArt.jpg" alt="logo" />
+            <img className="logo" src="/img/logoArt.jpg" alt="logo" />
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
