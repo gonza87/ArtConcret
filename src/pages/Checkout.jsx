@@ -26,7 +26,7 @@ function Checkout() {
 
     addDoc(pedidosRef, pedido).then((doc) => {
       setDocId(doc.id);
-      deleteCartCeckout();
+      deleteCartCheckout();
     });
   };
 
