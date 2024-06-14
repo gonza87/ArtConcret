@@ -8,6 +8,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import Cart from "./pages/Cart";
 import NotFound404 from "./pages/pageError/NotFound404";
 import { CartProvider } from "./context/CartContext";
+import Checkout from "./pages/Checkout";
 // import { CargarProductos } from "./components/CargarProductos";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/*" element={<NotFound404 />} />
+          <Route path="/checkout" element={<Checkout />} />
           {/* <Route path="/cargar" element={<CargarProductos />} /> */}
         </Routes>
 

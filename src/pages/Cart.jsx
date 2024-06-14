@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import { MdDelete } from "react-icons/md";
 
@@ -19,6 +20,14 @@ function Cart() {
       updateQuantity(productId, 1);
     }
   };
+
+  if (cart.length === 0) {
+    return (
+      <div className="container mt-5 mb-5">
+        <h2>Carrito vacío</h2>
+      </div>
+    );
+  }
 
   return (
     <div className="container mt-5 mb-5">
@@ -96,7 +105,9 @@ function Cart() {
                 <p>{totalPrice()}$</p>
               </div>
               <div className="text-center">
-                <span className="btnAddCart">Continuar Compra</span>
+                <Link style={{ textDecoration: "none" }} to={"/checkout"}>
+                  <span className="btnAddCart">Continuar Compra</span>
+                </Link>
               </div>
             </div>
           </div>
