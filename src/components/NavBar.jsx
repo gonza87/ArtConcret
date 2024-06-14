@@ -32,7 +32,7 @@ function NavBar() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto mb-3">
+          <Nav className="ms-auto">
             <Dropdown>
               <Dropdown.Toggle
                 className="menuNav"
@@ -62,7 +62,7 @@ function NavBar() {
             <Link className="menuNav" to="/about">
               Sobre Nosotros
             </Link>
-            <Link className="menuNav" to="/contact">
+            <Link className="menuNav menuContact" to="/contact">
               Contacto
             </Link>
           </Nav>

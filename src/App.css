@@ -256,6 +256,9 @@ body {
   .textCaruselHome {
     left: 70px;
   }
+ .menuContact{
+  margin-bottom: 20px;
+ }
 }
 
 @media (max-width: 768px) {
@@ -269,6 +272,7 @@ body {
   .containerListProducts {
     justify-content: center !important;
   }
+ 
 
 }
 
