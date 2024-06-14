@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import { json } from "react-router-dom";
-
+import Swal from "sweetalert2";
 export const CartContext = createContext();
 const cartInitial = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -23,6 +23,21 @@ export const CartProvider = ({ children }) => {
     } else {
       newCart.push(productAdded);
     }
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 1500,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      },
+    });
+    Toast.fire({
+      icon: "success",
+      title: "Producto agregado exitosamente",
+    });
     setCart(newCart);
   };
 
@@ -42,6 +57,27 @@ export const CartProvider = ({ children }) => {
   };
 
   const deleteCart = () => {
+    Swal.fire({
+      title: "Estas seguro?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si",
+      cancelButtonText: "No",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Carrito vaciado!",
+
+          icon: "success",
+        });
+        setCart([]);
+      }
+    });
+  };
+
+  const deleteCartCheckout = () => {
     setCart([]);
   };
 
@@ -62,6 +98,7 @@ export const CartProvider = ({ children }) => {
         deleteCart,
         deleteProduct,
         updateQuantity,
+        deleteCartCheckout,
       }}
     >
       {children}

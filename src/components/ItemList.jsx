@@ -1,5 +1,5 @@
 import Item from "./Item";
-
+import Spinner from "react-bootstrap/Spinner";
 function ItemList({ products }) {
   return (
     <>
@@ -8,7 +8,11 @@ function ItemList({ products }) {
           return <Item key={product.id} product={product} />;
         })
       ) : (
-        <p>Cargando productos...</p>
+        <p>
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+        </p>
       )}
     </>
   );

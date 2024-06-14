@@ -3,6 +3,7 @@ import ItemDetail from "./ItemDetail";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
 import { useParams } from "react-router-dom";
+import Spinner from "react-bootstrap/Spinner";
 
 function ItemDetailContainer() {
   const { itemId } = useParams();
@@ -20,7 +21,13 @@ function ItemDetailContainer() {
   return (
     <div className="container mt-5">
       <div className="row">
-        {product ? <ItemDetail product={product} /> : "Cargando..."}
+        {product ? (
+          <ItemDetail product={product} />
+        ) : (
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+        )}
       </div>
     </div>
   );

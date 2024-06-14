@@ -5,14 +5,7 @@ import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { db } from "../firebase/config";
 
 function Checkout() {
-  const {
-    cart,
-    deleteCart,
-    totalPrice,
-    quantityInCart,
-    deleteProduct,
-    updateQuantity,
-  } = useContext(CartContext);
+  const { cart, deleteCartCeckout, totalPrice } = useContext(CartContext);
 
   const { register, handleSubmit } = useForm();
   let [docId, setDocId] = useState("");
@@ -33,17 +26,17 @@ function Checkout() {
 
     addDoc(pedidosRef, pedido).then((doc) => {
       setDocId(doc.id);
-      deleteCart();
+      deleteCartCeckout();
     });
   };
 
   if (docId) {
     return (
       <>
-        <h1>Muchas gracias por tu compra</h1>
-        <p>
+        <h1 className="text-center mt-5 mb-3">Muchas gracias por tu compra</h1>
+        <p className="text-center textcheckout">
           Para hacer el seguimiento de tu pedido, el identificador es este:{" "}
-          {docId}
+          <strong>{docId}</strong>
         </p>
       </>
     );
