@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 function ItemDetail({ product }) {
-  const { cart, addToCart } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
 
   const handleQuantityChange = (event) => {

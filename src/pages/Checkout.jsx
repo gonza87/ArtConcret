@@ -146,6 +146,7 @@ function Checkout() {
                     id="paymentMethod"
                     value={paymentMethod}
                     onChange={handlePaymentMethodChange}
+                    required
                   >
                     <option value="">Selecciona Método de Pago</option>
                     <option value="CreditCard">Tarjeta de Crédito</option>

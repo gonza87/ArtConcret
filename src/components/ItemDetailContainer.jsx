@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
-
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase/config";
 import { useParams } from "react-router-dom";
 
 function ItemDetailContainer() {
@@ -8,14 +9,12 @@ function ItemDetailContainer() {
   let [product, setProduct] = useState();
 
   useEffect(() => {
-    fetch("/data/products.json")
-      .then((resp) => resp.json())
-      .then((data) => {
-        setProduct(data.find((prod) => prod.id === parseInt(itemId)));
-      })
-      .catch((error) => {
-        console.error("Error al cargar los productos:", error);
-      });
+    const docRef = doc(db, "products", itemId);
+    getDoc(docRef).then((res) => {
+      if (res.data()) {
+        setProduct({ ...res.data(), id: res.id });
+      }
+    });
   }, [itemId]);
   console.log(product);
   return (
