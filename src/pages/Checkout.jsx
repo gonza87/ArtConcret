@@ -5,7 +5,7 @@ import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { db } from "../firebase/config";
 
 function Checkout() {
-  const { cart, deleteCartCeckout, totalPrice } = useContext(CartContext);
+  const { cart, deleteCartCheckout, totalPrice } = useContext(CartContext);
 
   const { register, handleSubmit } = useForm();
   let [docId, setDocId] = useState("");
