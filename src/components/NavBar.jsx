@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Dropdown from "react-bootstrap/Dropdown";
 import ShoppingCart from "./ShoppingCart";
+import { CgMenuLeft } from "react-icons/cg";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase/config";
 
@@ -30,7 +31,10 @@ function NavBar() {
             <img className="logo" src="/img/logoArt.jpg" alt="logo" />
           </Link>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <CgMenuLeft style={{ color: "#f4f4f6" }} />
+        </Navbar.Toggle>
+
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Dropdown>
@@ -53,9 +57,6 @@ function NavBar() {
                     </Dropdown.Item>
                   );
                 })}
-                {/* <Dropdown.Item as={Link} to="/category/macetas">
-                  Action
-                </Dropdown.Item> */}
               </Dropdown.Menu>
             </Dropdown>
 
