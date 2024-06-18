@@ -162,7 +162,7 @@ function Checkout() {
                         {prod.name} x {prod.quantity}
                       </dt>
                       <dd className="col-sm-6">
-                        U$S{prod.price * prod.quantity}{" "}
+                        {prod.price * prod.quantity}$
                       </dd>
                     </dl>
                   ))}
@@ -170,9 +170,7 @@ function Checkout() {
 
                 <dl className="row">
                   <dd className="col-sm-6">
-                    <span className="checkoutTotalPrice">
-                      U$S {totalPrice()}
-                    </span>
+                    <span className="checkoutTotalPrice">{totalPrice()}$</span>
                   </dd>
                 </dl>
                 <button className="btnAddCart" type="submit">
