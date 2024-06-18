@@ -4,12 +4,16 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 
 function Contact() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div className="container containerForm">
       <h2 className="mt-5">Contacto</h2>
       <p>Si tienes alguna pregunta, no dudes en contactarnos</p>
       <p>Tel: 914-123-456 | info@misitio.com</p>
-      <Form className="mt-5 mb-5">
+      <Form className="mt-5 mb-5" onSubmit={handleSubmit}>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridName">
             <Form.Label>Nombre</Form.Label>
@@ -36,7 +40,9 @@ function Contact() {
           <Form.Control as="textarea" rows={3} />
         </Form.Group>
 
-        <button className="btnContactSend">ENVIAR MENSAJE</button>
+        <button type="submit" className="btnContactSend">
+          ENVIAR MENSAJE
+        </button>
       </Form>
     </div>
   );
