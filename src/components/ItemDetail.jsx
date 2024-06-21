@@ -23,7 +23,7 @@ function ItemDetail({ product }) {
         <p>{product.price} $</p>
         <p>DISPONIBILIDAD: {product.stock} DISPONIBLES</p>
 
-        <label for="inputCantidad">Cantidad</label>
+        <label htmlFor="inputCantidad">Cantidad</label>
         <input
           className="ms-2"
           type="number"
