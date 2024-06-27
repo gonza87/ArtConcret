@@ -1,11 +1,18 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import { useForm } from "react-hook-form";
-import { collection, addDoc, Timestamp } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  Timestamp,
+  doc,
+  updateDoc,
+} from "firebase/firestore";
 import { db } from "../firebase/config";
 
 function Checkout() {
-  const { cart, deleteCartCheckout, totalPrice } = useContext(CartContext);
+  const { cart, deleteCartCheckout, totalPrice, updateProductStock } =
+    useContext(CartContext);
 
   const { register, handleSubmit } = useForm();
   let [docId, setDocId] = useState("");
@@ -14,7 +21,7 @@ function Checkout() {
     setPaymentMethod(event.target.value);
   };
 
-  const comprar = (data) => {
+  const comprar = async (data) => {
     const pedido = {
       cliente: { ...data, paymethod: paymentMethod },
       productos: cart,
@@ -24,10 +31,22 @@ function Checkout() {
 
     const pedidosRef = collection(db, "pedidos");
 
-    addDoc(pedidosRef, pedido).then((doc) => {
-      setDocId(doc.id);
+    try {
+      const docRef = await addDoc(pedidosRef, pedido);
+      setDocId(docRef.id);
+
+      for (let prod of cart) {
+        const productRef = doc(db, "products", prod.id);
+        const newStock = prod.stock - prod.quantity;
+        await updateDoc(productRef, {
+          stock: newStock,
+        });
+      }
+
       deleteCartCheckout();
-    });
+    } catch (error) {
+      console.error("Error al realizar la compra: ", error);
+    }
   };
 
   if (docId) {
@@ -154,7 +173,7 @@ function Checkout() {
                 <h2 className="mb-3">Resumen del Pedido</h2>
                 <dl className="row">
                   {cart.map((prod, index) => (
-                    <dl className="row">
+                    <dl className="row" key={index}>
                       <dt className="col-sm-2">
                         <img className="imgCheckout" src={prod.image} alt="" />
                       </dt>

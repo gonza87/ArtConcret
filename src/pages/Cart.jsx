@@ -13,13 +13,21 @@ function Cart() {
     updateQuantity,
   } = useContext(CartContext);
 
-  const handleQuantityChange = (productId, newQuantity) => {
+  const handleQuantityChange = async (productId, newQuantity) => {
     if (newQuantity >= 1) {
-      updateQuantity(productId, newQuantity);
+      await updateQuantity(productId, newQuantity);
     } else {
-      updateQuantity(productId, 1);
+      await updateQuantity(productId, 1);
     }
   };
+
+  if (cart.length === 0) {
+    return (
+      <div className="container ">
+        <h2 className="textCarritoVacio">Carrito vacío</h2>
+      </div>
+    );
+  }
 
   if (cart.length === 0) {
     return (
